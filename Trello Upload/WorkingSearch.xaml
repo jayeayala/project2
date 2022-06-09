@@ -1,0 +1,203 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CriteriaTest" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1180,2318" sap2010:WorkflowViewState.IdRef="CriteriaTest_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="41">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="628,2253.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="sd:DataTable" Name="UserInfo" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[UserInfo]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="586,86.6666666666667" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Excel Sheets\UserInfo.xlsx" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: Rental Listings - 29,820 Rentals | Zillow" sap:VirtualizedContainerService.HintSize="586,2034.66666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="7f3f63c9-1710-4244-885c-19f108a96020" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="552,1816.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_10">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[UserInfo]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,1722" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1604" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="434,970.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Submit SearchSearchA'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="7f3f63c9-1710-4244-885c-19f108a96020" Text="[row(&quot;Location&quot;).toString]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.zillow.com/homes/for_rent/" DesignTimeRectangle="20, 199, 250, 38" ElementType="InputBox" FriendlyName="'Georgetown, NY'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='StyledFormControl-c11n-8-67-0__sc-18qgis1-0 fOOmax Input-c11n-8-67-0__sc-4ry0fw-0 bkYCwc' aaname='Submit SearchSearchA magnifying glass' /&gt;" Guid="a7edfbe6-1ada-469f-85a3-606292a0ba0f" ImageBase64="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" InformativeScreenshot="fb0486759bc96b968f3c0f21fefc66c5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Rental Listings - 29,820 Rentals | Zillow' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="270, 199, 50, 38" ElementType="Text" FriendlyName="'Submit SearchSearchA'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='StyledAdornment-c11n-8-67-0__sc-1kerx9v-0 AdornmentRight-c11n-8-67-0__sc-1kerx9v-2 bswgVI SearchBox__StyledSearchBoxAdornment-rxevgz-0 eSNywU' aaname='' check:innerText='Submit Search' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAqCAYAAAD4Uag9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFjSURBVGhD7ZkxSgNREIbNEbyBR4g3MDfQG8Ta1lZCCm3TahXIGUwb7SwlBC1sAtoG7dZqGffP2yGruMvCDkNmmA8GwntbvI/5dzbwDsgpfsWWyxeyXKvVK63X75Rl36VSwnzH8jynzeZzK1mVcxNFyKFzjBsxdA6xZFwND8SRCTELhJg1QswaISbBV0Z0PiM6viHqXaQaTIjG87QniZrYwxvR4eVO6G9B9vmjfFgAFTF0g6VOb5Mkdwi/T4qusZwUKmLDIn4sVQfLTRblQkdUxPrX6dDoTh3Yk+yaihgOjGoC0WzzXFtCrAv8/rSJImIrgYrY6D4d+uyuXPgHk8MDMeMBArnHojvVcY+PNPZQvN4VFTGAjy/LNRWmooScmhiDqB1d7UQgO3363VUJOXWxJqpyiGcX9koMsFzTv5Q27J2YFCFmjRCzRohZI8Qs4fYayd3FX+1VLRYsl9vL9TqcihH9AJv0lq0PWj9/AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Price'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7f3f63c9-1710-4244-885c-19f108a96020" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.zillow.com/homes/for_rent/" DesignTimeRectangle="453, 202, 109, 32" ElementType="Button" FriendlyName="'Price'" FullSelectorArgument="&lt;webctrl id='price' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='price' tag='BUTTON' type='' class='StyledButton-c11n-8-67-0__sc-wpcbcc-0 fwhQMI srp__fdiad6-0 bwOJjO' aaname='Price' check:innerText='Price' /&gt;" Guid="66f2fd13-07bb-4b3b-bdd2-2b060bbe98b0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHEAAAAkCAYAAAC+PdWUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAFPSURBVHhe7ZsxDsIwDEXhjByDUyBxDNZegSN0hqESNyhTmWANduWENC1IbPHvf5LV2GkZeLILQzaBuIcSAUgSh+ERuu4WrteOUXmoJ/UVSRJ14/l8WUZqRj2pr0iSqIaJH3JflOgUSgSAEgGgRAAoEQBKBIASAaBEANxKbA4hbPdZnGzjB+3FFmC4lrg7W3KXtYhM+RJ2zxFQJIZEoZVO3Eqtt3xNQErspa7jdbzGDrVObOQ6Ynkcx2VXz+oVgyFRRmT+hUd5k/dkLtHWM0FWTyM3f6ZiXEuM3VJ2TJTYWj6SCzHpk33F6mXU/h7F6MSCUaKN1sQfEmf1ylmnRFvnz8e/H0epl2O49h9L65SoFKMzfZbdl+/V3pluJZIPlAgAJQJAiQBQIgCUCAAlAkCJAFAiAJQIwKJEHqjxw9cDNTza5ifU0+LRNuIXSnRPCG8qHlIp+Dg2HQAAAABJRU5ErkJggg==" InformativeScreenshot="8ad7861b953d642395e0e2071105e016.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Rental Listings - 29,820 Rentals | Zillow' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Price max'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="7f3f63c9-1710-4244-885c-19f108a96020" Text="[row(&quot;Max Price&quot;).tostring]" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.zillow.com/homes/for_rent/" DesignTimeRectangle="649, 286, 159, 40" ElementType="InputBox" FriendlyName="'INPUT price-exposed-max'" FullSelectorArgument="&lt;webctrl id='price-exposed-max' tag='INPUT' type='tel' /&gt;" FuzzySelectorArgument="&lt;webctrl id='price-exposed-max' tag='INPUT' type='tel' class='StyledFormControl-c11n-8-67-0__sc-18qgis1-0 fOOmax Input-c11n-8-67-0__sc-4ry0fw-0 bkYCwc' aaname='Price max' /&gt;" Guid="3275aa8e-bcef-490e-8999-184d140ab56e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKMAAAAsCAYAAAAJigiNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAANLSURBVHhe7ZxNSxtRFIb7O7PJJpuAhEIQFxKKA41QFNKUWIoERqmFaCEos6goiJiCKJXoYC34EYmUWTQSIiEt3by9J5mZTnQC7SLjHXwPPJDMOXdWD+fcO4v7DAyGJkEZGdrEkIy93k80Gk2cnHzF8fEpIWNB/BLPxLdg+DJKQooc5we63V/q/29CxoL4JZ6Jb0EhfRnFVCkIW0zIOBDfxDsvfBnFUnZEEiXim3jnhS+jzPKwBYSME/HOC8pIHhXKSLSBMhJtoIxEGygj0QbKSLSBMhJtoIxEGygj0YbxynhtITdhIJEpo9YOyQvdOsxJVTNRhHUdkidPhghknEc2Z6Cwexda09krI5lTNZTxyROBjCWYy0UkZrfhPKi5Q61kwDArqo4yPnUikFFJdrQNQ0m56dzLt2soyPMjty4gY+eqhpW5eaSfywg3kMwWsbDTcPNt7L/NIzk3LHhrV3VZ2RLc/n1G4kM0Ml472Jw1kNu4Gco7n0pIKKFafl1wbQ3Wzhmatz21r7xDc6uMlBr51Qs3f7uPBbXXLOy2w/+T2BGRjKprbSnxcuu49PMDQQt7ai8ZJuMDzrE6Pbz3bH1eQqrfCd1O+aaG1tAaEicik3EwkgOd7WIdWe+U/U8y3sCaud9dBxKmXqhxzvEce6KT0T2spJbtfu5ybR4psx5S59I8hPWuhMy06njyecjl/qjv2R+RVs/T7wfvJfElQhkVB0tITlZgd22Yk3mYRyPqnG3MZpR4FRuO/30ypDN2G7BeGsiWyv311SuvlsSRaGXsf+DOY/HDClIi5Yi6/v5yYglfvLzQPcSiCBqQsblRRHJK5Fa/q0UkZiw01W9/DYkV0cqosM18f9xm185H19Ur/ZOzeeCgo+TqfLdhvS4iMxWQ8UqtybyCWXfXdNUBJ6feWwm8l8SKyGX0RPMPMqF1bXzbKCPrfWOcLsM6bcNezg9kVOO5qkZ22t1/+pypQ5F69+pZ4BmJDeOVkZD/gDISbaCMRBsoI9EGyki0gTISbaCMRBsoI9EGyki0gTISbQiVkZeFkqgZeVkor1EmUTPyGmVeME+iQvwSz8S30AvmJSQhpkqRzHJCxoH4JZ4FRZQYkpHBeMygjAxNAvgD21MPmSMrLdEAAAAASUVORK5CYII=" InformativeScreenshot="482e9760456acf6fa33f89361ec13699.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Rental Listings - 29,820 Rentals | Zillow' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="647, 284, 163, 44" ElementType="Text" FriendlyName="'Price max'" FullSelectorArgument="&lt;webctrl idx='2' parentid='price-form' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='price-form' tag='LABEL' class='' aaname='' check:innerText='Price max' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKMAAAAsCAYAAAAJigiNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAANLSURBVHhe7ZxNSxtRFIb7O7PJJpuAhEIQFxKKA41QFNKUWIoERqmFaCEos6goiJiCKJXoYC34EYmUWTQSIiEt3by9J5mZTnQC7SLjHXwPPJDMOXdWD+fcO4v7DAyGJkEZGdrEkIy93k80Gk2cnHzF8fEpIWNB/BLPxLdg+DJKQooc5we63V/q/29CxoL4JZ6Jb0EhfRnFVCkIW0zIOBDfxDsvfBnFUnZEEiXim3jnhS+jzPKwBYSME/HOC8pIHhXKSLSBMhJtoIxEGygj0QbKSLSBMhJtoIxEGygj0YbxynhtITdhIJEpo9YOyQvdOsxJVTNRhHUdkidPhghknEc2Z6Cwexda09krI5lTNZTxyROBjCWYy0UkZrfhPKi5Q61kwDArqo4yPnUikFFJdrQNQ0m56dzLt2soyPMjty4gY+eqhpW5eaSfywg3kMwWsbDTcPNt7L/NIzk3LHhrV3VZ2RLc/n1G4kM0Ml472Jw1kNu4Gco7n0pIKKFafl1wbQ3Wzhmatz21r7xDc6uMlBr51Qs3f7uPBbXXLOy2w/+T2BGRjKprbSnxcuu49PMDQQt7ai8ZJuMDzrE6Pbz3bH1eQqrfCd1O+aaG1tAaEicik3EwkgOd7WIdWe+U/U8y3sCaud9dBxKmXqhxzvEce6KT0T2spJbtfu5ybR4psx5S59I8hPWuhMy06njyecjl/qjv2R+RVs/T7wfvJfElQhkVB0tITlZgd22Yk3mYRyPqnG3MZpR4FRuO/30ypDN2G7BeGsiWyv311SuvlsSRaGXsf+DOY/HDClIi5Yi6/v5yYglfvLzQPcSiCBqQsblRRHJK5Fa/q0UkZiw01W9/DYkV0cqosM18f9xm185H19Ur/ZOzeeCgo+TqfLdhvS4iMxWQ8UqtybyCWXfXdNUBJ6feWwm8l8SKyGX0RPMPMqF1bXzbKCPrfWOcLsM6bcNezg9kVOO5qkZ22t1/+pypQ5F69+pZ4BmJDeOVkZD/gDISbaCMRBsoI9EGyki0gTISbaCMRBsoI9EGyki0gTISbQiVkZeFkqgZeVkor1EmUTPyGmVeME+iQvwSz8S30AvmJSQhpkqRzHJCxoH4JZ4FRZQYkpHBeMygjAxNAvgD21MPmSMrLdEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NClick ClickType="Single" DisplayName="Click 'Save search'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7f3f63c9-1710-4244-885c-19f108a96020" Version="V1">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.zillow.com/homes/for_rent/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22mapBounds%22%3A%7B%22west%22%3A-76.000753390625%2C%22east%22%3A-69.5737514375%2C%22south%22%3A42.45270852156448%2C%22north%22%3A45.58796295644022%7D%2C%22isMapVisible%22%3Atrue%2C%22filterState%22%3A%7B%22fsba%22%3A%7B%22value%22%3Afalse%7D%2C%22fsbo%22%3A%7B%22value%22%3Afalse%7D%2C%22nc%22%3A%7B%22value%22%3Afalse%7D%2C%22fore%22%3A%7B%22value%22%3Afalse%7D%2C%22cmsn%22%3A%7B%22value%22%3Afalse%7D%2C%22auc%22%3A%7B%22value%22%3Afalse%7D%2C%22fr%22%3A%7B%22value%22%3Atrue%7D%2C%22ah%22%3A%7B%22value%22%3Atrue%7D%7D%2C%22isListVisible%22%3Atrue%2C%22mapZoom%22%3A8%7D" DesignTimeRectangle="1019, 202, 87, 32" ElementType="Button" FriendlyName="'Save search'" FullSelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='BUTTON' type='button' class='StyledButton-c11n-8-67-0__sc-wpcbcc-0 hfcvWP srp__fdiad6-0 bwOJjO save-search-button' aaname='Save search' check:innerText='Save search' /&gt;" Guid="b88fded5-f4dc-478f-8a46-d296d27a6f29" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFsAAAAkCAYAAADmQkaNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAIiSURBVGhD7Zo9bsMwDIXbpefqfQp0yj16AR+hV/DaqXOAjtm6ZeuqkoKe+iTTQeLEdBHwAQ+wTf2Qn6Rk0UMKuSlgO6qB/XlI6fktpafXlB5fwkut/JSj8mRV2BoIyLe18mTgFbauhNUhfJ2VK1Rhx65ex8oVqrCthuHbGArYDoYCtoOhgO1gKGA7GArYDoYCtoOhy2F/lA7QT0o7q90deS9l7qVuK3aOoctgv6d0lLbHr79vIz3fq7eBXXb1KNDN+J16G9hinVg1GLFRflJYeVGMBRq+5YM4v5fTAvGpYZtja6yMDzGU2T5lzgFz46dwJpcMW545ZtU/Z2jRHySAq3jSHYrRZ0kORWjRFWIpKEPhZ4r1JyePJZoU2C9keUe7uXwYah2zfLMWO9eLvnjHZjnD0CLYcJ9Ev5MQ40KbogucXpMjS3AYBhahF+DP5TNZZHW3UOy8s6ltczLPMHQVbE6w330NVDESbnb5iQLnnBdYpED7Odgn8ymwmxP072DLhJNJSwH8rLG8q+gdcS2SC8rwOHGFSHH1Tubkb7X4Aq05+qX/yXws2MZYQ6l1M9i9JuCKRml7pGJRzCRJfCf1uwu7tIrH6HOiOWfzsWCru7EAfhvY4UWGAraDoYDtYChgOxgK2A6GAraDoYDtYChgOxiqsOOSzjo2L+nE9bN1bF4/i4uVt7fyNC9WqjSgKxHQr7PyU44MWtXADq2rgO2mlH4Bwb1OmJJPGcwAAAAASUVORK5CYII=" InformativeScreenshot="cba9b3672446ebf249623defc6f07671.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Rental Listings - 1,951 Rentals | Zillow' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                    </Sequence>
+                    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="Attach Browser 'RentalLis Page'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="9798162ed4f26b0b35149ad2b64a13f7" Selector="&lt;html /&gt;">
+                      <ui:BrowserScope.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'UL'" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Address' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='address' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Bedrooms' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='li' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Bathroom' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='li' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Price' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Sq.Ft' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='ul' idx='1' /&gt;&lt;webctrl tag='li' idx='3' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100" SimulateClick="True">
+                              <ui:ExtractData.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fd95e946-bc46-4108-931f-02951292be06" InformativeScreenshot="8b56a8dfb6d14fd74e1fd07d52121560" Selector="&lt;webctrl parentid='grid-search-results' tag='UL' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:ExtractData.Target>
+                            </ui:ExtractData>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:BrowserScope.Body>
+                    </ui:BrowserScope>
+                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="434,114.666666666667" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="[row(&quot;Location&quot;).toString]" WorkbookPath="Excel Sheets\Richardson, TX.xlsx" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAVhSURBVFhHzVd7TJVlHH7O+YBzDndEUDNREPASBeJUZjpOiqJADAxcyqXkeuAcTStL1lrzkssaDK21tLY223Si/7jQlq2amVZLbVqYl8KwlsrCKbcQha/n/b6PzvHwcQBT17M9E7/393ue33v7vYC7gu9oYOnJKDjkHeR2/hypfHsg8I/wQuanM+HoOYBK+SbZxZ/rlW9i7L7BMgqIzvVDev1SzvokjeU76JBPcCxXiRGx9xTmkUDKzlFYJVfBLjf1M++jGFslv8zYcCXnnsAnCFiwKxYr5Q9ocqOfaX9eZ+wOJUfk/id4+0lI3WvlzD6j8C03I0/sZs4h5iZTw6ipDQNGniXrdjNyvyuiWIOb+HDYQI1nFC2hOSR4WQywvheGyu7NPFhXdEQHY69G9f8O+TK1NlEzlNqaiR7EYFC0hLnvTGXCLiZ3/CsyFDrkVvISl/4weYrfXLeMWt0fUXsyPYz9CxEfpleZUNG1EBW3DzOhxyXZE9t44M6j/O96LDn6PDkNWV9ZkH0kEaWtX3PcVaeH2l+gvCsFietMziK8A4DEqhBWXc6gsy4JA9MhX6TxAea8gvT9SZi10aSpOZHzfSrjzjDeuR0qzzCvhJ7BijeCJ3PmPcUcaHELdGcHBY/ynlcj/WAmHq8ZgVnr1QOrhzg7UHytUsnrr9VMzwJ6+7CASUFclrd1gvrYzNnugf1WGTL2PYb4NV4ImKC5eEBcxXiUXNvGfNGu++uWd71Fby6BWkCtTlAjl6oWK66kIWbZWERl8pCO09Q9YHIhkFaXgJLWOuZ36eiqLO96Q6+A2+R52G6tR2nbDPb1YIRN05Q1SCYDKcG6w4InD5nhE2hQvhvYb2LzjCi5Mpfb9DnNPTeuOwqwdVfDxhkXddK4JQ5Ty/wQOFHRVWCQ+B6MMGJKpS/yLkxB/i8rUfTXchT8FgBTiDoenSsxdz6Nv6WBmIi+sRizy5303EBvfyAwiqJn5sF6NgHmF8w0Umcj4B8heoMXopaEo7hlHso63+dB/AlFza9irDWM5gbFPDJLQlnbAgofp4H7Fe5lTht5mTyNopbdnMSLWNbwKL2ZDK6g5GOEkUvbh6AY0MDEwFguVT6rFW+/EGnBs02vYdxCUaUaG5ltRFmHleMnXExvM/YqD++PvPv7seTYOvaIZOQcDeU2eStbKPlQwGmpIjBSLKUvnvpmBpPXUugYqe6lgy9hYeNGjE+nOSFWKToHKG2fw/HjnL3MnN/Jw+S7yPqyEIvqJmHONklZJY8Qb3f8GjPSPk7mAdpMsdMUdTYQu9yO/HM1mJARpmWwAIMB+Y0JLGw3nuNrWXDxTfaGXDICs2sAv4e1wMFgCZf4dk9j1bUU03v5brKoD7Fo70NahorElyTYOpJRcj0XiWtjELHYfT094xGb+rslu5E/KnrX00iv/4sT+wnyzsVgdJKa2IeIVANillr4r/ZhEIxKMmBx3Vik1i0m12JFcwZCppr7+sBWHfNemp9CQeN0jHTrBZ5gYGuWTEZ4+3vRKICHbwa5Gnnn93CVfyCbyBuw3Xzd2Qd0O2HvVRQ0ZSE0brATBJgC1T5hHmHBzA1hKLiwgL1iC/v9MW7rH8oBtrut8ACd0DVgE0bGM2AAmEN5a9isxiT5Y/mRcbzfqWQ1807TrJUUb4D7S+iqP0gBtu4tiMoO1uycEM1pzGxvpNRF8Ao+oSxlZa9oQJ2k6IADm7py0ALEb8Cl7aswMYdPJqH+XRCItPok7uFqjh8kW13ih8chFCDu/5+8Zk+zR4Rj/s5MXset/PazbuxwOaQCVP7KGe/jQbqkM3b3HEYB94f/1wLECX4Q1AqYFPAP8wViHklbMU4AAAAASUVORK5CYII=" InformativeScreenshot="5e3d1cbe8886ff659e250c623995f6cc.png" Selector="&lt;html app='msedge.exe' title='Rental Listings - 29,820 Rentals | Zillow' /&gt;" Url="https://www.zillow.com/homes/for_rent/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
