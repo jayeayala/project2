@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Dispacter" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="550,877" sap2010:WorkflowViewState.IdRef="Dispacter_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Dispacter" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="966,877" sap2010:WorkflowViewState.IdRef="Dispacter_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -54,6 +54,14 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Dispacter" sap:VirtualizedContainerService.HintSize="560,812" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -70,7 +78,11 @@
       </sap:WorkflowViewStateService.ViewState>
       <Sequence DisplayName=" Dispatcher" sap:VirtualizedContainerService.HintSize="476,628" sap2010:WorkflowViewState.IdRef="Sequence_3">
         <Sequence.Variables>
-          <Variable x:TypeArguments="x:String" Default="C:\Revature\P2\project2\Project 2\UserInfo.xlsx" Name="ClientEmail" />
+          <Variable x:TypeArguments="x:String" Name="ClientEmail">
+            <Variable.Default>
+              <Literal x:TypeArguments="x:String">C:\Revature\P2\project2\Project 2\ApartoBotFramework\UserInfo.xlsx</Literal>
+            </Variable.Default>
+          </Variable>
           <Variable x:TypeArguments="sd:DataTable" Name="User" />
         </Sequence.Variables>
         <sap:WorkflowViewStateService.ViewState>
@@ -78,7 +90,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="User Tranasaction" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+        <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="User Transaction" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
           <ui:GetRobotAsset.Value>
             <OutArgument x:TypeArguments="x:String">[ClientEmail]</OutArgument>
           </ui:GetRobotAsset.Value>
@@ -92,7 +104,11 @@
               </ActivityAction.Argument>
               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <Sequence.Variables>
-                  <Variable x:TypeArguments="x:String" Default="UserQueue" Name="ApartmentQueue" />
+                  <Variable x:TypeArguments="x:String" Name="ApartmentQueue">
+                    <Variable.Default>
+                      <Literal x:TypeArguments="x:String">CustomerInfo</Literal>
+                    </Variable.Default>
+                  </Variable>
                 </Sequence.Variables>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -101,15 +117,33 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="[ApartmentQueue]" Reference="[CurrentRow(&quot;Name&quot;).ToString]">
                   <ui:AddQueueItem.ItemInformation>
-                    <InArgument x:TypeArguments="x:String" x:Key="Name ">[CurrentRow("Name").ToString]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Email">[CurrentRow("Email").ToString]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Location">[CurrentRow("Location").ToString]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Bedroom">[CurrentRow("Bedroom").ToString]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Bathroom">[CurrentRow("Bathroom").ToString]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Square Feet">[CurrentRow("Square Feet").ToString]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Min Price">[CurrentRow("Min Price").ToString]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Max Price">[CurrentRow("Max Price").ToString]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Argument1" />
+                    <InArgument x:TypeArguments="x:String" x:Key="Name ">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Name&quot;).ToString" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Email">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Email&quot;).ToString" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Location">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Location&quot;).ToString" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Bedroom">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Bedroom&quot;).ToString" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Bathroom">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Bathroom&quot;).ToString" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Square Feet">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Square Feet&quot;).ToString" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Min Price">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Min Price&quot;).ToString" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Max Price">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Max Price&quot;).ToString" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Customer Excel Sheet">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Customer Excel Sheet&quot;).ToString" />
+                    </InArgument>
                   </ui:AddQueueItem.ItemInformation>
                 </ui:AddQueueItem>
               </Sequence>
