@@ -1,0 +1,210 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Rent_Automation" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="803,2821" sap2010:WorkflowViewState.IdRef="Rent_Automation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="40">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Rent_Automation" sap:VirtualizedContainerService.HintSize="688,2756" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="sd:DataTable" Name="User_Info" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange AddHeaders="True" DataTable="[User_Info]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="646,87" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1" SheetName="Sheet1" WorkbookPath="User_Info.xlsx" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: Apartments for Rent in Hartford, CT with 1 Bedrooms and 1 Bathrooms from $1,000-$1" sap:VirtualizedContainerService.HintSize="646,2382" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="be2af18b-8bbf-43d8-8314-7aeeb8346006" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="612,2166" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[User_Info]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="570,2073" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Row" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="536,1957" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="494,1864" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="URL">
+                          <Variable.Default>
+                            <Literal x:TypeArguments="x:String">https://www.forrent.com/find/CT/metro-Central+CT/Hartford/beds-1/baths-1</Literal>
+                          </Variable.Default>
+                        </Variable>
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Hartford, CT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="be2af18b-8bbf-43d8-8314-7aeeb8346006" Text="row(&quot;location&quot;).ToString" Version="V1">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="https://www.forrent.com/find/CT/metro-Central+CT/Hartford/price-1000+to+1750/beds-1/baths-1" DesignTimeRectangle="8, 140, 308, 48" ElementType="InputBox" FriendlyName="'Hartford, CT'" FullSelectorArgument="&lt;webctrl id='autocomplete-search-input-website-facet-rail' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='autocomplete-search-input-website-facet-rail' tag='INPUT' type='text' class='search-input no-clear-button ng-untouched ng-pristine ng-valid' aaname=' Search by Location ' /&gt;" Guid="b63d2e7a-7309-4006-9ed0-fd0ae2e8776e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATgAAAA0CAYAAAAeyiSlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN8SURBVHhe7doxjtNAGIbhcARuwFEoqYO2RVwCRAeKItEg0XKBrES1R6BAytZItBTWFilpEK3xzHzjjCfj2EmcbPj1PtJIJLbHk8KvJllmUQ0AxihvIXBVVTEYDIaZobyxgwNgj/JG4ADYo7wROAD2KG8EDoA9yhuBA2CP8kbgANijvBE4APYobwQOgD3KG4EDYI/yRuAA2KO8ETgA9ihvBA6APcobgQNgj/JG4ADYo7wROAD2KG8EDoA9yhuBA2CP8naZwK0Xs3p2s6o3et3xsKrnzTKW93p9CjfXYq0XweZ27j6sH5PcI7H3cw3R545r21nf/bJzrDiOvTdg2N36p3s+Ar13VpcJ3KZe3TT3SQM3ZTwLjg2cv242r1cPesOJwcsCHYVQL+vyUQDO7z9/66cv3xO4KRwVOL8zy+IWaddWWi+BA4Z9vvteP3nx9soDF3czyegcdyFo5lv5nZCb+0P9rnN+E4L8K15y/7CD2o79c/dcF89Jjg8rRLhj3axb/8wQOGDY8zdfrjxwheCFhzvZ9cR4dUIxZgenc9JQ5Lum4twxbtvr2t/2Dgrcul521jMegQOGubg9TuBcDPaM+ND7BzmPRh4qH6H8a96IwBWvywJcOqcQ3fZ+hwSuOM84BA4Y9niBG7uDS7S7JI1uqPKHfThwvZFIo1aau3i/gc9VQuCAs3r26uP/8RXVLc0N/35+zimBK61jIHB9cemdrxdfUYFzev3p63UHrnjulIErRSKdrzR38X5H7OBKa+zoP07ggGHffvy65sCFB3x+2z0zPNynBy5cN+Y3uGzufB5P9zsocI2eNXj+WH6fgMAB47i/pPq4OXrvrA7ewaUPso67pbbhOzZw8Zz02jwqxbl31xWje3DgGmGu8h8y+nZ3BA4Yx/1nX9c2T++d1SGB20YoDheC8NtV+/D3RCjGqo3HztxBCEw6vw44fXM3Otc1nyf/f3D+eE+gdrRr3Y58nSkCB4zXPE+BXmMSTYjHBg7A2ShvBG5Sza4s//0QwOUpbwRuSutFzx8PAFyU8kbgANijvBE4APYobwQOgD3KG4EDYI/yRuAA2KO8ETgA9ihvBA6APcobgQNgj/JG4ADYo7wROAD2KG8EDoA9yhuBA2CP8kbgANijvBE4APYobwQOgD3KG4EDYI/yRuAA2KO8hcBVVcVgMBhGRlX/A1o8GNXgAtW+AAAAAElFTkSuQmCC" InformativeScreenshot="49d4c40d26e789b706b832c8589f48ba.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Apartments for Rent in Hartford, CT with 1 Bedrooms and 1 Bathrooms from $1,000-$1,750 | ForRent.com' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NGetText DisplayName="Get Text 'https://www.forrent.com…'" sap:VirtualizedContainerService.HintSize="452,156" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="be2af18b-8bbf-43d8-8314-7aeeb8346006" Version="V1">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable DesignTimeRectangle="197, 46, 792, 26" ElementType="InputBox" FriendlyName="'https://www.forrent.com…'" FullSelectorArgument="&lt;ctrl name='Apartments for Rent in Hartford, CT with 1 Bedrooms and 1 Bathro*' role='pane' /&gt;&lt;ctrl name='Microsoft Edge' role='pane' /&gt;&lt;ctrl name='App bar' role='tool bar' /&gt;&lt;ctrl name='Address and search bar' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Apartments for Rent in Hartford, CT with 1 Bedrooms and 1 Bathro*' role='pane' /&gt;&lt;ctrl name='Microsoft Edge' role='pane' /&gt;&lt;ctrl name='App bar' role='tool bar' /&gt;&lt;ctrl name='Address and search bar' role='editable text' automationid='' /&gt;" Guid="a8035757-4b48-4cbf-839b-d2cbdc6405d6" InformativeScreenshot="88433d3808a930c991a27bef0913d2f5.png" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Apartments for Rent in Hartford, CT with 1 Bedrooms and 1 Bathro*' /&gt;" SearchSteps="Selector, FuzzySelector" Visibility="Interactive" />
+                        </uix:NGetText.Target>
+                        <uix:NGetText.Text>
+                          <OutArgument x:TypeArguments="x:String">[URL]</OutArgument>
+                        </uix:NGetText.Text>
+                      </uix:NGetText>
+                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="452,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[URL.ToString]" />
+                      <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Use Browser Edge: Apartments for Rent with 1 Beds, 1 Bath in Hartford, CT | ForRent.com" sap:VirtualizedContainerService.HintSize="452,1218" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="698fbb8e-f8d9-4c70-8479-e845141f031e" Version="V1">
+                        <uix:NApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="418,1002" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NClick ClickType="Single" DisplayName="Click 'Rent Range'" sap:VirtualizedContainerService.HintSize="376,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="be2af18b-8bbf-43d8-8314-7aeeb8346006" Version="V1">
+                                <uix:NClick.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.forrent.com/find/CT/metro-Central+CT/Hartford/beds-1/baths-1?bounds=42.08069346774005,41.52071114304491,-72.52645574399631,-73.45342717954318" DesignTimeRectangle="353, 155, 128, 18" ElementType="Text" FriendlyName="'Rent Range'" FullSelectorArgument="&lt;webctrl tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='label fill-container' aaname=' Rent Range ' check:innerText='Rent Range' /&gt;" Guid="c0c82956-e277-4065-84fb-1960d7902ed5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIQAAAAWCAYAAAAB6jTvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI0SURBVGhD7ZjNrcIwEIRfT7RBDxRCAdxpgjNnaqAFWuDI0U8TMdJ4Wf/wkhyct59kQey1vd4ZkoifFARCGCLICEMEGWGIICMzxP1+T7vdzm37/T49Ho935LJcr9dp7xLYF/t7eaHV5gbf8WGIkvDn8zkdDof0fD7fPctAsXsM4cXATGua9b/RbQgYAYaAAEsy1xCv1ysdj8fJsMF8ug1RKjyueeu2c2mi2+02fTKOa2A/9mm/pWUazENuyJFoXmg6zrNcLpfp04sBjOP46XSarm2eulepfqMw6w6BQuhjhAJTOM7RNW1MS2xQi6FoKhK+q7jMgzEqtM2D57Pr6hy7V60Go/Hnd4iSSIijGBRCTWQLPdcQ9h2Ce9bysjkQjcF8PS9gHq3cdZ3R+DAE3O01WxwIYfuAFtITZ44hvLzUDBbuz1hrCDUqUCE9UW3uPTUYjeYdAodGMa1g7PfaWobQGHzHXlZUgLWZiycwc1jCENzHts0aAqAAnlFah17TEICCaH8pVgVmDksYYlThS3QZgsJqgUqxKBLj1jYE11JREGNFsvlzXs0Q3jrMg7kjplWD0eh+qcQYfo1aRBRGi2aFoxC8BhRjCUMAjtn1bJ56G+8xhM2T19/WYDS6DQFYWD0s+9h0rMcQgGtQDEuryBAI8ykU4jQnrI8xno051AwB1ARo/N/Cm6f7lfIcgcwQQR3P4FsjDFFA7ygEffp42CJhiAr2UbB1M4AwRJARhggywhCBkNIvx86jls7HbToAAAAASUVORK5CYII=" InformativeScreenshot="a322362f0112f24d84230ac8383f2de8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Apartments for Rent with 1 Beds, 1 Bath in Hartford, CT | ForRent.com' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                                </uix:NClick.Target>
+                              </uix:NClick>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Rent Range'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="376,216" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="be2af18b-8bbf-43d8-8314-7aeeb8346006" Text="Row(&quot;Min Price&quot;).ToString" Version="V1">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.forrent.com/find/CT/metro-Central+CT/Hartford/beds-1/baths-1?bounds=42.08069346774005,41.52071114304491,-72.52645574399631,-73.45342717954318" DesignTimeRectangle="8, 122, 0, 0" ElementType="InputBox" FriendlyName="'INPUT min-price-input'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='number' aaname='Minimum Rent' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='number' aaname='Minimum Rent' class='rent-input ng-untouched ng-pristine ng-valid' /&gt;" Guid="42dcd5f4-22a1-4bca-a825-4f5f702db0ec" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAApSURBVBhXY4CB79+//wdhKJeBYf/+/f9BGMplYGD0KPsPwlAuTKDsPwD8uhU5UE8X3QAAAABJRU5ErkJggg==" InformativeScreenshot="2aa0e9a520a9628049c257aec7f02a41.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Apartments for Rent with 1 Beds, 1 Bath in Hartford, CT | ForRent.com' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <uix:Target DesignTimeRectangle="345, 183, 168, 48" FriendlyName="'Rent Range'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;frc-root&amp;gt;main&amp;gt;fr-search-results-container&amp;gt;frc-facet-rail-container&amp;gt;fr-facet-rail&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;fr-dropdown-menu&amp;gt;div&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='DIV' class='menu-container' aaname='' check:innerText='Rent Range' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKwAAAA0CAYAAAAXBNP2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMNSURBVHhe7ZixjdtAEEXPNamJC9SD7CYuUQFK7EQNOBTsTKkVuABDgQuwAFWgUCEPn+A3BuNdkkcNDx7iP2Bx5O7s7pDzSAr31AiRiKfr9dqoqWVp7RsWB0L8z9BRCStSIGFFKiSsSIWEFamQsCIVElakQsKKVEhYkQoJK1IhYUUqJKxIhYQVqZCwIhUSVqRCwopUSFiRiknCns/nZrVaFdt6vW4ul0sXGcvxeGz3roF9sX8pL7S+uSIHk4Wtibnf75vNZtPcbreuJwbKOEbYUgxkn/NhEu9DuLAQFcJCkEgeFfZ+vzfb7bZ9oERewoWtiYFzfpr9XEp+Op3av4zjGtiPfbbfMyQ15iE35EhsXmh2nNdyOBzav6UYwDiO73a79tznafeq3b/M/Pz9pzuqMyamj3d5w6JQ9mcCBaRYnGPX9DFDMoK+GEplJcKxlY95MMaK6PPg9fl17Ry/V989yM7Hz9+aD88vzdcfv7qef8EYYj59+d71vJ1wYX1hahIhjrJQFCu5F+FRYf1vWO7Zl5fPgdgYzLfXC5jHUO52nexQxpq0dhxyT2WysHg7lJovHkTxfcAWuiTPI8KW8rKyerg/Y72w9kECVrSSdD73MfdgCdSkjZIVhL1hURQU2wvF/lKbS1gbg2Ps5aUDWJu5lARkDhHCch/fliQs8NJGygrChAUoUEnkoaLMKSygMLa/FmsFZA4Rwi5NzD6spJGyglBhKZ4tYC0WRWTc3MJyLSsNYrxEPn/O6xO2tA7zYO6IGboHSyP6zUpChQUYw9vMFhmFs0X1YlEUngPKEiEs4Jhfz+dpP9NjhPV58vyt92CJQNpIWUG4sICFt8VgH5sdGyMs4BqUxTMkAQTCfIqEOJsT1scYr4059AkLrKRo/L9taZ7dr5anqDNJWNFP6QEUMUjYB7FvZII++/kXcUjYAPynXrLOh4QVqZCwIhUSVqRCwopUSFiRCgkrUiFhRSokrEiFhBWpkLAiFRJWpELCilRIWJEKCStSIWFFKiSsSIWEFan4KywO1NRytGvzCt16yjLgFXIGAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT max-price-input'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="376,216" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="be2af18b-8bbf-43d8-8314-7aeeb8346006" Text="Row(&quot;Max Price&quot;).ToString" Version="V1">
+                                <uix:NTypeInto.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.forrent.com/find/CT/metro-Central+CT/Hartford/beds-1/baths-1?bounds=42.08069346774005,41.52071114304491,-72.52645574399631,-73.45342717954318" DesignTimeRectangle="437, 240, 68, 32" ElementType="InputBox" FriendlyName="'INPUT max-price-input'" FullSelectorArgument="&lt;webctrl id='max-price-input' tag='INPUT' type='number' /&gt;" FuzzySelectorArgument="&lt;webctrl id='max-price-input' tag='INPUT' type='number' class='rent-input ng-valid ng-dirty ng-touched' aaname='Maximum Rent' /&gt;" Guid="b4d883ca-4b38-4471-b6ac-01abf7aa723b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAkCAYAAAAq23xmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH0SURBVGhD7ZqhrkIxDIbvSyNxOCQOxxvgeAMcEoUCB4KgIKjdfIf8pJTBEjjZvcna5M/O1nXQ77RBjJ8U9tYCUMEeAF2v13Q4HNJut0vb7bYpkTO5w8DaHRAONh2Px3Q+n9PlcmlK5EzuMLCQ7oCgx4ZccEuCASxkd0CQa7FyvGAAC9kdEH2YC2hRsJAFoIwCUEEBqKAAVNDHgPb7fRqNRp14zu05nU5pMpl04jm357/ra0Dj8fglgMVikQaDQduAptNpN242mye/qqdpQPP5vANAtVj/arVKs9mskwfEGpUlWT++4XD4AFyVyJlaq6WvAfHlUQ6CIHkAdq5zWGfOOn7NAQUw/wJqqRdAJGHbTO3FaIEoxleChyYoy+WyW7e+2uoFkH3Gx6gK8Mn7+FybKY5132611Qsg5iSESJJkVSUekBK3UPwepCrCp7W/UG+AAMKckZ9+/Kzb5JV0qcUYmQuk319TvQFS8sCxb90mL4iCZ8+xgDhTrUW8j6mp3gDZt27feK6CFCM/MYLgz9XcQq+p3gAhnpWo1iwg5sBT6yD8xAFuvV53e/0ZitFnEVML2MeAWlEAKigAFRSACgpABQWgggJQQVlAcXF408uLw7h6vunl1XP8eaHw5wUMB/TYRB+2JHImdwsHewAU9mwB6K2l9AvzPZ5+DxjDiQAAAABJRU5ErkJggg==" InformativeScreenshot="329309a7643ccf3691889cb107aa79d9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Apartments for Rent with 1 Beds, 1 Bath in Hartford, CT | ForRent.com' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                                </uix:NTypeInto.Target>
+                              </uix:NTypeInto>
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,200" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:ExtractData DelayBetweenPagesMS="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Structured Data 'OL'" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='fr-listing-card' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Apartments' attr='text' name2='URL' attr2='href'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='fr-listing-card' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Address' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='fr-listing-card' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='address' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Price' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='fr-listing-card' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Bed' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='fr-listing-card' idx='1' /&gt;&lt;webctrl tag='article' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='p' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100" NextLinkSelector="&lt;webctrl css-selector='body&amp;gt;frc-root&amp;gt;main&amp;gt;fr-search-results-container&amp;gt;fr-search-results&amp;gt;div&amp;gt;div&amp;gt;fr-list-view&amp;gt;section&amp;gt;ol&amp;gt;li&amp;gt;fr-listing-card&amp;gt;article&amp;gt;div' idx='12' tag='DIV' /&gt;" SimulateClick="True">
+                                  <ui:ExtractData.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="338ab7e7-26fc-4a8f-b96e-fe2b63fe2dcd" InformativeScreenshot="c5ba2ebd0ccee94bf602282104fe972f" Selector="&lt;webctrl css-selector='body&amp;gt;frc-root&amp;gt;main&amp;gt;fr-search-results-container&amp;gt;fr-search-results&amp;gt;div&amp;gt;div&amp;gt;fr-list-view&amp;gt;section&amp;gt;ol' tag='OL' /&gt;" WaitForReady="COMPLETE">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                    </ui:Target>
+                                  </ui:ExtractData.Target>
+                                </ui:ExtractData>
+                              </Sequence>
+                            </Sequence>
+                          </ActivityAction>
+                        </uix:NApplicationCard.Body>
+                        <uix:NApplicationCard.TargetApp>
+                          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE2SURBVDhPY+BMmPGfL23+f4HMRf8FsxYD8RI8eDFQ3eL//BkL//OkzP3PHjv1PwNf+oL/ogWr/0sUrf0vUbyOKCwOVCuSt+I/d9Ls/wyCQBNJ0QzDYoVr/vOkzgUaAHQaNgWEsDjQAL7UeUADssk0oAhoADDs4Aa0bLnyHx1gE/vw7RdYHBQOWA0wb9sJx+o1m8Fik/fdhIttuvAELEaUASBxEEA34MGbL7gNQAapi05CWahg8fH7uA0AsZExCIDkYHyQZhAg2wCYOrXqTVADyE0HoGhMBRsATInFpKdEUELiBSUkfmBeACVLbIrwYdH8lf+5k+f8Z+BKnPVfIGPRf6GcZf+Fc5f/FwHjFeDMgoKhciA1QtlL/4Ms5oif9p+BJXLif9boSf/ZYqaQgCeD9TBHTvgPAMxOc7XSPg+2AAAAAElFTkSuQmCC" InformativeScreenshot="4d66a2ab0a5b8182a6f394c9687d01ef.png" Selector="&lt;html app='msedge.exe' title='Apartments for Rent with 1 Beds, 1 Bath in Hartford, CT | ForRent.com' /&gt;" Url="[URL]" />
+                        </uix:NApplicationCard.TargetApp>
+                      </uix:NApplicationCard>
+                    </Sequence>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE2SURBVDhPY+BMmPGfL23+f4HMRf8FsxYD8RI8eDFQ3eL//BkL//OkzP3PHjv1PwNf+oL/ogWr/0sUrf0vUbyOKCwOVCuSt+I/d9Ls/wyCQBNJ0QzDYoVr/vOkzgUaAHQaNgWEsDjQAL7UeUADssk0oAhoADDs4Aa0bLnyHx1gE/vw7RdYHBQOWA0wb9sJx+o1m8Fik/fdhIttuvAELEaUASBxEEA34MGbL7gNQAapi05CWahg8fH7uA0AsZExCIDkYHyQZhAg2wCYOrXqTVADyE0HoGhMBRsATInFpKdEUELiBSUkfmBeACVLbIrwYdH8lf+5k+f8Z+BKnPVfIGPRf6GcZf+Fc5f/FwHjFeDMgoKhciA1QtlL/4Ms5oif9p+BJXLif9boSf/ZYqaQgCeD9TBHTvgPAMxOc7XSPg+2AAAAAElFTkSuQmCC" InformativeScreenshot="895f19dd48c1d2c38c174c6a9c41658c.png" Selector="&lt;html app='msedge.exe' title='Apartments for Rent in Hartford, CT with 1 Bedrooms and 1 Bathrooms from $1,000-$1,750 | ForRent.com' /&gt;" Url="https://www.forrent.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:WriteRange AddHeaders="True" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="646,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="Listings.xlsx" />
+  </Sequence>
+</Activity>
