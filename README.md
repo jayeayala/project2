@@ -24,7 +24,7 @@ APARTO is a functional unattended robot used to search multiple rental websites 
 
 # Getting Started 
 - Git Clone https://github.com/jayeayala/project2.git
-- Ensure that you have Mircosoft Edge installed.
+- Ensure that you have Microsoft Edge installed.
 - UiPath Studio and UiPath Orchestrator need to be installed.
 - Open Main.xaml and hit debug to start consumer automation. 
 ---
