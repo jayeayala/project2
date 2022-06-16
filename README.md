@@ -32,7 +32,7 @@ APARTO is a functional unattended robot used to search multiple rental websites 
 # Contributors
 - Mike Tuskey
 - Frankline Elong
-- Jason Ayala
+- Justin Ayala
 - Trianna Nunes
 - Sylvester Gold
 
