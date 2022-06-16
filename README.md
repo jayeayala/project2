@@ -1,11 +1,8 @@
 
-# Project 2 REFramework
-
-# P2 APARTO Bot Automation
+# Project 2: REFramework
 
 # APARTO BOT 
-- APARTO is a functional unattended robot used to search multiple rental websites based on customer parameters and place all matching rental properties into one convenient spreadsheet and email it to the customer. 
-
+APARTO is a functional unattended robot used to search multiple rental websites based on customer parameters and place all matching rental properties into one convenient spreadsheet and email it to the customer. 
 ---
 
 # Technologies Used
@@ -25,20 +22,16 @@
 
 # Getting Started 
 - Git Clone https://github.com/jayeayala/project2.git
-- Ensure that you have Mircosoft Edgen installed.
+- Ensure that you have Mircosoft Edge installed.
 - UiPath Studio and UiPath Orchestrator need to be installed.
-- Open Main.xaml and hit debug. 
----
-
-# Usage 
- - Bot allows for easy and convenient searching of multiple rental websites daily. 
+- Open Main.xaml and hit debug to start consumer automation. 
 ---
 
 # Contributors
 - Mike Tuskey
 - Frankline Elong
-- Jaye Ayala
-- Anna Nunes
+- Jason Ayala
+- Trianna Nunes
 - Sylvester Gold
 
 # License 
