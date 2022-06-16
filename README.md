@@ -3,7 +3,9 @@
 
 # APARTO BOT 
 APARTO is a functional unattended robot used to search multiple rental websites based on customer parameters and place all matching rental properties into one convenient spreadsheet and email it to the customer. 
+
 ---
+
 
 # Technologies Used
 - Data scraping 
