@@ -27,7 +27,7 @@ git clone https://github.com/jayeayala/project2.git
 ## Contributors
 
 >  Trianna Nunes
->  Jason Ayala
+>  Jaye Ayala
 >  Mike Tuskey
 >  Frankline Elong
 >  Sylvester Gold
