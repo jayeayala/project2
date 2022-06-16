@@ -8,7 +8,8 @@ An attended bot creadted using ReFramework that will find apartments for rent ba
 
 * Ui Path Studio Orchestrator
 * ReFramework
-* Tech 3 - version 3.0
+* Ui Path Studio
+* Edge Browser
 
 ## Features
 
