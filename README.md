@@ -1,38 +1,45 @@
-# P2: Aparto Bot
 
-## Project Description
+# Project 2 REFramework
 
-An attended bot creadted using ReFramework that will find apartments for rent based on criteria set by consumer.
+# P2 APARTO Bot Automation
 
-## Technologies Used
+# APARTO BOT 
+- APARTO is a functional unattended robot used to search multiple rental websites based on customer parameters and place all matching rental properties into one convenient spreadsheet and email it to the customer. 
 
-* Ui Path Studio Orchestrator
-* ReFramework
-* Ui Path Studio
-* Edge Browser
+---
 
-## Features
+# Technologies Used
+- Data scraping 
+- UiPath Orchestrator
+- UiPath Studio
+- UiPath Assistant
+- Email Automation
+---
 
-* Criteria can be set by location and price
-* Daily results will be emailed to consumer
-* Search will bne cponducted everyday based on a time trigger
+# Features 
+- Search multiple rental websites based on customer rental requirements. 
+- Creates spreadsheets of all rental properties that match customer rental preferences. 
+- Emails customers spreadsheets of all rental properties that match their preferences from multiple rental sites. 
+- Triggered to run every day at 9 AM.
+---
 
-## Getting Started
- 
-git clone https://github.com/jayeayala/project2.git
+# Getting Started 
+- Git Clone https://github.com/jayeayala/project2.git
+- Ensure that you have Mircosoft Edgen installed.
+- UiPath Studio and UiPath Orchestrator need to be installed.
+- Open Main.xaml and hit debug. 
+---
 
-## Usage
+# Usage 
+ - Bot allows for easy and convenient searching of multiple rental websites daily. 
+---
 
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+# Contributors
+- Mike Tuskey
+- Frankline Elong
+- Jaye Ayala
+- Anna Nunes
+- Sylvester Gold
 
-## Contributors
-
->  Trianna Nunes
->  Jaye Ayala
->  Mike Tuskey
->  Frankline Elong
->  Sylvester Gold
-
-## License
-
-This project uses the following license: MIT
+# License 
+This project uses the following license: https://github.com/jayeayala/project2/blob/main/LICENSE
